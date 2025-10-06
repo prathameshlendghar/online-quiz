@@ -1,3 +1,5 @@
+Partially Developed till now (Working on it)
+
 # Online Quiz API
 A RESTful API designed to handle quiz creation, question management, and quiz delivery.
 
