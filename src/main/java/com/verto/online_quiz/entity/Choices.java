@@ -1,5 +1,7 @@
 package com.verto.online_quiz.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +13,9 @@ import java.util.List;
 @Entity
 @Getter
 @Setter
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Choices {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +25,8 @@ public class Choices {
     private String choiceText;
 
     private String addOnFileURL;
+
+    private Integer choiceNum;
 
     @ManyToOne
     @JoinColumn(name = "question_id", nullable = false)

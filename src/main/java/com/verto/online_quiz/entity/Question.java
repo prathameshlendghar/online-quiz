@@ -1,5 +1,6 @@
 package com.verto.online_quiz.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.verto.online_quiz.entity.type.QuestionType;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,10 +8,15 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.util.List;
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 @Entity
 @Getter
 @Setter
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class Question {
 
     @Id

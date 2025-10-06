@@ -1,5 +1,7 @@
 package com.verto.online_quiz.entity;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,6 +9,9 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@JsonIdentityInfo(
+        generator = ObjectIdGenerators.PropertyGenerator.class,
+        property = "id")
 public class CorrectAnswer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,4 +28,8 @@ public class CorrectAnswer {
     @JoinColumn(name = "choice_id", nullable = false)
     private Choices choice;
 
+    @Override
+    public String toString() {
+        return id + " " + answerText + " " + choice.getChoiceNum() + " " + choice.getChoiceText();
+    }
 }
