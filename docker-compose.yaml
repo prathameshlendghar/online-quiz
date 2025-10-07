@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: prathamesh
       POSTGRES_PASSWORD: 1234
     ports:
-      - "5432:5432"
+      - "5433:5432"           //Changed port if the main postgres port is busy on other machine too
     volumes:
       - data:/var/lib/postgresql/data
     networks:

@@ -39,7 +39,16 @@ A RESTful API designed to handle quiz creation, question management, and quiz de
 
 ### Database Schema Design
 ![img_1.png](img_1.png)
-    
+
+### Steps to Run the application Locally
+
+- **Step 1:** Confirm that your system has docker and docker-compose installed [Docker needs sudo user or user in docker Group on linux]
+- **Step 2:** Navigate to the project folder ```path/online-quiz/```
+- **Step 3:** Execute ```docker-compose up``` on CMD
+- **Step 4:** Application is up and running in Docker Container
+>Now we can call API endpoints on ```localhost:8080```
+
+
 ### Defined Endpoints and API Contracts
 - POST ```/api/quizzes/manage```                
   - **Description**: To Create new Quiz with title and description 
