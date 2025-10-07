@@ -2,7 +2,7 @@
 # Online Quiz API
 A RESTful API designed to handle quiz creation, question management, and quiz delivery.
 
----
+-----
 ## Functional Requirements
 
 ### 📘 Quiz Management
@@ -27,6 +27,15 @@ A RESTful API designed to handle quiz creation, question management, and quiz de
 - Upon submission:
     - The system immediately calculates and returns a **score** for MCQ-type questions.
     - **Text-based answers** are excluded from automatic scoring and must be evaluated manually by the quiz creator (or admin).
+
+### 🛠️ Technology Stack Used
+
+- **Java** - Programming language
+- **Spring Boot** - Backend framework
+- **PostgreSQL** - Relational database
+- **Spring Data JPA** - ORM for database interaction
+- **Docker** - Containerization
+- **Docker Compose** - Multi-container orchestration
 
 ### Database Schema Design
 ![img_1.png](img_1.png)

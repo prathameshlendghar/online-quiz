@@ -1,0 +1,36 @@
+services:
+  postgres:
+    image: postgres:15
+    container_name: postgres-db
+    environment:
+      POSTGRES_DB: onlinequiz
+      POSTGRES_USER: prathamesh
+      POSTGRES_PASSWORD: 1234
+    ports:
+      - "5432:5432"
+    volumes:
+      - data:/var/lib/postgresql/data
+    networks:
+      - quiz-net
+
+  springboot-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: quiz-app
+    depends_on:
+      - postgres
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/onlinequiz
+      SPRING_DATASOURCE_USERNAME: prathamesh
+      SPRING_DATASOURCE_PASSWORD: 1234
+    ports:
+      - "8080:8080"
+    networks:
+      - quiz-net
+
+volumes:
+  data:
+
+networks:
+  quiz-net:
