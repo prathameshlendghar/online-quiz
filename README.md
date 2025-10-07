@@ -1,4 +1,4 @@
-> **Note:** Unit testing is done manually and no Test cases are written yet
+> **Note:** Unit testing is done manually and no Test cases are written yet. I will keep building some extra features around it on side branch.
 # Online Quiz API
 A RESTful API designed to handle quiz creation, question management, and quiz delivery.
 
