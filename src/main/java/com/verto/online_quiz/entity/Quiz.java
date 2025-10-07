@@ -41,6 +41,4 @@ public class Quiz {
     @OneToMany(mappedBy = "quiz")
     private List<Submission> submissions = new ArrayList<>();
 
-//    @ForeignKey
-//    Long userId;
 }

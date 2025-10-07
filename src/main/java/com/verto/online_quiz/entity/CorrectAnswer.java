@@ -28,8 +28,4 @@ public class CorrectAnswer {
     @JoinColumn(name = "choice_id", nullable = false)
     private Choices choice;
 
-    @Override
-    public String toString() {
-        return id + " " + answerText + " " + choice.getChoiceNum() + " " + choice.getChoiceText();
-    }
 }

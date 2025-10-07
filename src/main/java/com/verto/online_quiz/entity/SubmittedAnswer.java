@@ -18,7 +18,7 @@ public class SubmittedAnswer {
     @Column(length = 300)
     private String textAns;
 
-    private BigDecimal marksGained;
+//    private BigDecimal marksGained;
 
     @ManyToOne                                               // Many submittedAnswers can belong to one question
     @JoinColumn(name = "question_id", nullable = false)

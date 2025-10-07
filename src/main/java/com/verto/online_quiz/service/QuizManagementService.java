@@ -79,15 +79,7 @@ public class QuizManagementService {
         CorrectAnswerRequestDto correctAnswerRequestDto = questionDto.getCorrectAnswers();
         List<CorrectAnswer> correctAnswers = new ArrayList<>();
 
-        //Fetching the Correct Text Answer if any
-//        if (correctAnswerRequestDto.getCorrectAnswerText() != null) {
-//            CorrectAnswer correctAnswer = new CorrectAnswer();
-//            correctAnswer.setAnswerText(correctAnswerRequestDto.getCorrectAnswerText());
-//            correctAnswer.setQuestion(savedQuestion);  // set question reference
-//            correctAnswers.add(correctAnswer);
-//        }
-
-        //Fetching the Correct Choice Answers.
+        //Fetching the Correct Answers.
         for (Integer choiceNum : correctAnswerRequestDto.getCorrectChoicesNum()) {
             for(Choices savedChoice : savedChoices){
                 Integer choiceIdx = savedChoice.getChoiceNum();
